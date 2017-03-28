@@ -1,0 +1,13 @@
+/* 
+  Bootstrap 4 is loaded via CDN directly in index.html.
+  Additional styles can be added here.
+*/
+
+body {
+  padding: 30px 20px;
+}
+
+.copybutton {
+  float: right;
+  cursor: pointer;
+}
