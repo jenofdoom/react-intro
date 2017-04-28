@@ -1,0 +1,7 @@
+// This styles index should only contain imports of libraries and base styles.
+// Styles for particular components get included directly from the component.
+
+@import "base-styles/variables"; // project variables - must also be included in every component file
+@import "base-styles/base"; // body, typography, basic elements
+@import "base-styles/custom-bootstrap";  // overridden bootstrap variables
+@import "~bootstrap/scss/bootstrap";  // bootstrap library

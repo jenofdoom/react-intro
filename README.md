@@ -55,7 +55,7 @@ First, we need to install [node.js](https://nodejs.org/) and its package manager
 
 [Windows instructions](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 
-Next, from within the `react-intro` folder, run:
+Next, from within the `react-intro/tutorial` folder, run:
 
 ```
 npm install
@@ -69,7 +69,7 @@ If you have a favourite code editor feel free to use that, but I recommend
 package.
 
 In Atom, right click in the left panel, select `Add Project Folder` and open the
-`react-intro` folder. You should see a number of already existing files.
+`react-intro/tutorial` folder. You should see a number of already existing files.
 
 ### Project starter files
 
@@ -84,7 +84,10 @@ I also set up a [Webpack](https://webpack.github.io/) based development build
 process. If you'd like to learn more about how that works, I run a
 JavaScript Build Pipelines training.
 
-You should have the following files already present:
+If you want to refer to a finished, working version of today's project, have a
+look at the `example` folder.
+
+In the `tutorial` folder you should have the following files already present:
 
 * `src/components/homepage/homepage.jsx` our basic React component
 * `src/data.js` raw data we'll use in our web app
@@ -230,6 +233,12 @@ being passed in conform to a particular _type_ (like, a string, or an array).
 Let's add the PropTypes to our Table component now (you can see that the linter
 is complaining at us for not having it).
 
+First, in a terminal in the `tutorial` directory, run:
+
+```
+npm install --save-dev prop-types
+```
+
 Change:
 ```
 import React, { Component } from 'react';
@@ -237,7 +246,8 @@ import React, { Component } from 'react';
 
 to:
 ```
-import React, { Component, PropTypes } from 'react';
+import React, { Component, } from 'react'; 
+import PropTypes from 'prop-types';
 ```
 
 and underneath the Table class (before the `export default Table;` line), add:
@@ -588,7 +598,8 @@ Now we've passed this down to to Search we can pick it up there and use it (not
 forgetting to set up a PropType for `searchValueEntered`):
 
 ```
-import React, { Component, PropTypes } from 'react';
+import React, { Component, } from 'react'; 
+import PropTypes from 'prop-types';
 
 ...
   
@@ -815,7 +826,8 @@ Create a new file, `src/components/row/row.jsx`, into which we'll set up a
 component and copy over some of the logic from Table:
 
 ```
-import React, { Component, PropTypes } from 'react';
+import React, { Component, } from 'react'; 
+import PropTypes from 'prop-types';
 
 class Row extends Component {
   
