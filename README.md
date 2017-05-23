@@ -415,6 +415,8 @@ class Table extends Component {
         </tr>
       );
     });
+    
+    return rows;
   }
   
   render () {
