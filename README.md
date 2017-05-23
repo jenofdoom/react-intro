@@ -684,8 +684,8 @@ if (rows.length === 0) {
 
 ## Routes using React Router
 
-We're building a Single Page App (SPA) (it's totally fine to use Ract for just
-indivdual bits on a page that is otherwise rendered by the way) but we don't yet
+We're building a Single Page App (SPA) (it's totally fine to use React for just
+individual bits on a page that is otherwise rendered by the way) but we don't yet
 have any other routes. We can add an About page using [React
 Router](https://reacttraining.com/react-router/web/guides/quick-start).
 
