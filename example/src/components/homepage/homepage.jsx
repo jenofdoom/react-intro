@@ -42,7 +42,7 @@ class Homepage extends Component {
         </div>
         <div className="row mt-3">
           <div className="col col-md-6">
-            <small className="font-italic">Source: Office of the Clerk/Parliamentary Service. Licensed by the Clerk of the House of Representatives and/or the Parliamentary Corporation on behalf of Parliamentary Service for re-use under the Creative Commons Attribution 4.0 International licence. Full licence available at <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>. Data last updated <a href="https://www.parliament.nz/en/get-involved/have-your-say/contact-an-mp/">21st December 2016.</a></small>
+            <small className="font-italic">Source: Office of the Clerk/Parliamentary Service. Licensed by the Clerk of the House of Representatives and/or the Parliamentary Corporation on behalf of Parliamentary Service for re-use under the Creative Commons Attribution 4.0 International licence. Full licence available at <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>. Data last updated <a href="https://www.parliament.nz/en/get-involved/have-your-say/contact-an-mp/">5th April 2018.</a></small>
           </div>
         </div>
         <ScrollToTop showUnder={160}>
