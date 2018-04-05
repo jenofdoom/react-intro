@@ -1,23 +1,25 @@
+/* 
+  Note: this simple webpack configuration is for a development
+  environment - don't use this directly for production. 
+*/
+
 const path = require('path');
-const autoprefixer = require('autoprefixer');
-const flexfixes = require('postcss-flexbugs-fixes');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-  entry: ['babel-polyfill', './src/index.jsx'],
-
+  entry: './src/index.jsx',
+  
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-
+  
+  devtool: 'cheap-module-source-map',
+  
   devServer: {
     historyApiFallback: true // enables reloads of routed pages
   },
-
-  devtool: process.env.npm_lifecycle_event === 'build' ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
-
+  
   module: {
     rules: [
       {
@@ -32,28 +34,8 @@ const config = {
         loader: 'babel-loader' // config in .babelrc
       },
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: [
-                  autoprefixer({browsers: ['last 2 versions']}),
-                  flexfixes()
-                ]
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                includePaths: [path.resolve(__dirname, 'src')]
-              }
-            }
-          ]
-        })
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -61,18 +43,17 @@ const config = {
       }
     ]
   },
-
+  
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
       hash: true
-    }),
-    new ExtractTextPlugin('bundle.css')
+    })
   ],
-
+  
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss'],
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    extensions: ['.js', '.jsx', '.json', '.css'],
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   }
 };
 

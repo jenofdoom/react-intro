@@ -1,6 +1,10 @@
+/* 
+  Bootstrap 4 is loaded via CDN directly in index.html.
+  Additional styles can be added here.
+*/
+
 body {
   padding: 30px 20px;
-  background: url(assets/img/crossword.png);
 }
 
 .copybutton {

@@ -1,7 +1,7 @@
 import React, { Component, } from 'react'; 
 import PropTypes from 'prop-types';
 
-import './table.scss';
+import './table.css';
 import Row from 'components/row/row';
 
 class Table extends Component {

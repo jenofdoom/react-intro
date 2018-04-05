@@ -14,6 +14,8 @@ const config = {
     filename: 'bundle.js'
   },
   
+  devtool: 'cheap-module-source-map',
+  
   devServer: {
     historyApiFallback: true // enables reloads of routed pages
   },
